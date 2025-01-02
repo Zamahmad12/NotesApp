@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    background-color: aqua;
+}
+.button{
+    border-radius: 5px ;
+    background-color: rgb(9, 245, 147);
+    padding: 5px;
+    margin: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    float: right;
+    float: inline-end;
+}

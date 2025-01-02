@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h1>Notes App</h1>
+
+  <div *ngIf="isEditing">
+    <input [(ngModel)]="editingNote.content" />
+    <button class="button" (click)="saveEdit()">Save</button>
+    <button class="button" (click)="cancelEdit()">Cancel</button>
+  </div>
+
+  <div *ngIf="!isEditing">
+    <input #input [(ngModel)]="newNote" placeholder="Add a new note" />
+    <button class="button" (click)="addNote()">Add Note</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let note of notes">
+      <app-notes
+        [note]="note"
+        (delete)="deleteNote($event)"
+        (edit)="editNote($event)"
+      ></app-notes>
+    </li>
+  </ul>
+</div>
